@@ -1,0 +1,33 @@
+Running: /opt/Xilinx/14.6/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "secureip" -o "/home/main/git/FPGA-CORDIC/CORDIC/asdf_isim_beh.exe" -prj "/home/main/git/FPGA-CORDIC/CORDIC/asdf_beh.prj" "work.asdf" 
+ISim P.68d (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "/home/main/git/FPGA-CORDIC/CORDIC/ipcore_dir/cordic2.vhd" into library work
+Parsing VHDL file "/home/main/git/FPGA-CORDIC/CORDIC/asdf.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 105260 KB
+Fuse CPU Usage: 1260 ms
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling package std_logic_textio
+Compiling package numeric_std
+Compiling package math_real
+Compiling package bip_utils_pkg_v2_0
+Compiling package std_logic_signed
+Compiling package mult_gen_pkg_v11_0
+Compiling package cordic_v4_0_pack
+Compiling architecture behavioral of entity cordic_v4_0 [\cordic_v4_0(2,2,1,0,"spartan6",...]
+Compiling architecture cordic2_a of entity cordic2 [cordic2_default]
+Compiling architecture behavior of entity asdf
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 17 VHDL Units
+Built simulation executable /home/main/git/FPGA-CORDIC/CORDIC/asdf_isim_beh.exe
+Fuse Memory Usage: 1221864 KB
+Fuse CPU Usage: 1640 ms
+GCC CPU Usage: 170 ms

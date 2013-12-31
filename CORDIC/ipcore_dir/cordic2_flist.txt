@@ -1,0 +1,15 @@
+# Output products list for <cordic2>
+_xmsgs/pn_parser.xmsgs
+cordic2/doc/cordic_ds249.pdf
+cordic2/doc/cordic_v4_0_vinfo.html
+cordic2.asy
+cordic2.gise
+cordic2.ngc
+cordic2.sym
+cordic2.vhd
+cordic2.vho
+cordic2.xco
+cordic2.xise
+cordic2_flist.txt
+cordic2_readme.txt
+cordic2_xmdf.tcl

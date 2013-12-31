@@ -1,0 +1,10 @@
+Command line:
+   asdf_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  41449
+
+Tue Dec 31 18:47:03 2013
+
+
+ Elaboration Time: 0.02 sec
