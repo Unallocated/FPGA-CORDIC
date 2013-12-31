@@ -21,66 +21,8 @@
 
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="CORDIC.xise"/>
 
-  <files xmlns="http://www.xilinx.com/XMLSchema">
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="asdf_beh.prj"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="asdf_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="asdf_isim_beh.wdb"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
-    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
-  </files>
+  <files xmlns="http://www.xilinx.com/XMLSchema"/>
 
-  <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1388520772" xil_pn:in_ck="703802098157691602" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1388520772">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="asdf.vhd"/>
-      <outfile xil_pn:name="root.vhd"/>
-      <outfile xil_pn:name="test.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1388520741" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8451049841587038292" xil_pn:start_ts="1388520741">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1388520741" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-6928933749028150062" xil_pn:start_ts="1388520741">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1388520695" xil_pn:in_ck="3965824083618232301" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4608298235964694316" xil_pn:start_ts="1388520695">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ipcore_dir/cordic2.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/cordic2.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1388520772" xil_pn:in_ck="2791234993865552727" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1388520772">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="asdf.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/cordic2.vhd"/>
-      <outfile xil_pn:name="root.vhd"/>
-      <outfile xil_pn:name="test.vhd"/>
-    </transform>
-    <transform xil_pn:end_ts="1388520779" xil_pn:in_ck="2791234993865552727" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-4103011960613430520" xil_pn:start_ts="1388520772">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="asdf_beh.prj"/>
-      <outfile xil_pn:name="asdf_isim_beh.exe"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
-    </transform>
-    <transform xil_pn:end_ts="1388520780" xil_pn:in_ck="-7498866018228333555" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="1917136879754390101" xil_pn:start_ts="1388520779">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="asdf_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-    </transform>
-    <transform xil_pn:name="TRAN_SubProjectAbstractToPreProxy">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-    </transform>
-  </transforms>
+  <transforms xmlns="http://www.xilinx.com/XMLSchema"/>
 
 </generated_project>
