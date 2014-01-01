@@ -9,6 +9,8 @@ entity cordic_test is
 end cordic_test;
 
 architecture Behavioral of cordic_test is
+	-- CORDIC core that is set up to generate sin and cos
+	-- based on the 3.14 to -3.14 value provided to phase_in
 	COMPONENT cordic2
 		PORT(
 			phase_in  : IN  std_logic_vector(7 downto 0);
@@ -20,12 +22,28 @@ architecture Behavioral of cordic_test is
 			clk       : IN  std_logic
 		);
 	END COMPONENT;
-
+	-- fixed point phase input
+	-- phase_in(7) is the sign bit
+	-- phase_in(6 downto 5) are the whole number bits
+	-- phase_in(4 downto 0) are the fractional bits
 	signal phase_in  : std_logic_vector(7 downto 0);
+	
+	-- Both x and y out are fixed point signed numbers
+	-- ?_out(7) is the sign bit
+	-- ?_out(6) is the whole number
+	-- ?_out(5 downto 0) are the fractional bits
+	-- Both signals are scaled from 1 to -1 and are the 
+	-- magnitude of the sign wave at the given phase.
+	-- Think of 1 as being the high point in the sin wave
+	-- and -1 as being the low point
 	signal x_out     : std_logic_vector(7 downto 0);
 	signal y_out     : std_logic_vector(7 downto 0);
+	
+	-- This is ignored
 	signal phase_out : std_logic_vector(7 downto 0);
+	-- This is ignored
 	signal rdy       : std_logic;
+	-- Ignored (will be set to a constant '1' at the instantiation)
 	signal nd        : std_logic := '0';
 	
 	signal slow_clk : std_logic := '0';
