@@ -1,0 +1,1203 @@
+--------------------------------------------------------------------------------
+Release 14.6 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.6/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr
+cordic_test.pcf -ucf nexys3.ucf
+
+Design file:              cordic_test.ncd
+Physical constraint file: cordic_test.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-06-08)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1074764384830 paths analyzed, 165 endpoints analyzed, 16 failing endpoints
+ 16 timing errors detected. (16 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  15.796ns.
+--------------------------------------------------------------------------------
+
+Paths for end point uut/blk0000038f (SLICE_X27Y18.A1), 112216803931 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.796ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk0000038f (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.761ns (Levels of Logic = 31)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk0000038f
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X24Y7.C2       net (fanout=21)       0.883   uut/sig000000e8
+    SLICE_X24Y7.C        Tilo                  0.205   uut/sig0000002e
+                                                       uut/blk000003aa
+    SLICE_X18Y6.A4       net (fanout=22)       0.794   uut/blk000002cc/sig0000054a
+    SLICE_X18Y6.COUT     Topcya                0.379   uut/blk000002cc/sig00000546
+                                                       uut/blk000002cc/blk000002e4
+                                                       uut/blk000002cc/blk000002e0
+    SLICE_X18Y7.CIN      net (fanout=1)        0.003   uut/blk000002cc/sig00000546
+    SLICE_X18Y7.COUT     Tbyp                  0.076   uut/sig000000fb
+                                                       uut/blk000002cc/blk000002dc
+    SLICE_X18Y8.CIN      net (fanout=1)        0.082   uut/blk000002cc/sig00000542
+    SLICE_X18Y8.CMUX     Tcinc                 0.261   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X19Y8.C3       net (fanout=35)       0.357   uut/sig000000b4
+    SLICE_X19Y8.C        Tilo                  0.259   uut/blk000002a7/sig0000051a
+                                                       uut/blk000002a7/blk000002cb
+    SLICE_X18Y9.AX       net (fanout=1)        0.415   uut/blk000002a7/sig0000051a
+    SLICE_X18Y9.COUT     Taxcy                 0.208   uut/blk000002a7/sig00000516
+                                                       uut/blk000002a7/blk000002bb
+    SLICE_X18Y10.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000516
+    SLICE_X18Y10.COUT    Tbyp                  0.076   uut/blk000002a7/sig00000512
+                                                       uut/blk000002a7/blk000002b7
+    SLICE_X18Y11.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000512
+    SLICE_X18Y11.CMUX    Tcinc                 0.261   uut/sig00000093
+                                                       uut/blk000002a7/blk000002a9
+    SLICE_X19Y10.A6      net (fanout=35)       0.359   uut/sig00000093
+    SLICE_X19Y10.A       Tilo                  0.259   uut/blk00000238/sig00000474
+                                                       uut/blk00000238/blk0000025c
+    SLICE_X20Y9.AX       net (fanout=1)        0.435   uut/blk00000238/sig00000474
+    SLICE_X20Y9.COUT     Taxcy                 0.259   uut/blk00000238/sig00000470
+                                                       uut/blk00000238/blk0000024c
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   uut/blk00000238/sig00000470
+    SLICE_X20Y10.COUT    Tbyp                  0.076   uut/blk00000238/sig0000046c
+                                                       uut/blk00000238/blk00000248
+    SLICE_X20Y11.CIN     net (fanout=1)        0.003   uut/blk00000238/sig0000046c
+    SLICE_X20Y11.CMUX    Tcinc                 0.272   uut/sig00000072
+                                                       uut/blk00000238/blk0000023a
+    SLICE_X21Y11.A6      net (fanout=35)       0.169   uut/sig00000072
+    SLICE_X21Y11.A       Tilo                  0.259   uut/blk000001c9/sig000003ce
+                                                       uut/blk000001c9/blk000001ed
+    SLICE_X20Y12.AX      net (fanout=1)        0.386   uut/blk000001c9/sig000003ce
+    SLICE_X20Y12.COUT    Taxcy                 0.259   uut/blk000001c9/sig000003ca
+                                                       uut/blk000001c9/blk000001dd
+    SLICE_X20Y13.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003ca
+    SLICE_X20Y13.COUT    Tbyp                  0.076   uut/blk000001c9/sig000003c6
+                                                       uut/blk000001c9/blk000001d9
+    SLICE_X20Y14.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003c6
+    SLICE_X20Y14.CMUX    Tcinc                 0.272   uut/sig00000051
+                                                       uut/blk000001c9/blk000001cb
+    SLICE_X21Y14.A6      net (fanout=35)       0.192   uut/sig00000051
+    SLICE_X21Y14.A       Tilo                  0.259   uut/blk0000015a/sig00000328
+                                                       uut/blk0000015a/blk0000017e
+    SLICE_X20Y15.AX      net (fanout=1)        0.386   uut/blk0000015a/sig00000328
+    SLICE_X20Y15.COUT    Taxcy                 0.259   uut/blk0000015a/sig00000324
+                                                       uut/blk0000015a/blk0000016e
+    SLICE_X20Y16.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000324
+    SLICE_X20Y16.COUT    Tbyp                  0.076   uut/sig00000003
+                                                       uut/blk0000015a/blk0000016a
+    SLICE_X20Y17.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000320
+    SLICE_X20Y17.CMUX    Tcinc                 0.272   uut/sig00000030
+                                                       uut/blk0000015a/blk0000015c
+    SLICE_X21Y16.D4      net (fanout=24)       0.467   uut/sig00000030
+    SLICE_X21Y16.D       Tilo                  0.259   uut/blk000000a1/sig00000217
+                                                       uut/blk000000a1/blk000000c5
+    SLICE_X24Y15.AX      net (fanout=1)        0.654   uut/blk000000a1/sig00000217
+    SLICE_X24Y15.COUT    Taxcy                 0.259   uut/blk000000a1/sig00000213
+                                                       uut/blk000000a1/blk000000b5
+    SLICE_X24Y16.CIN     net (fanout=1)        0.003   uut/blk000000a1/sig00000213
+    SLICE_X24Y16.BMUX    Tcinb                 0.260   uut/blk000000a1/sig0000020f
+                                                       uut/blk000000a1/blk000000b1
+    SLICE_X26Y17.B5      net (fanout=1)        0.591   uut/sig0000001e
+    SLICE_X26Y17.COUT    Topcyb                0.380   uut/blk00000360/sig0000061d
+                                                       uut/blk00000360/blk0000037e
+                                                       uut/blk00000360/blk00000370
+    SLICE_X26Y18.CIN     net (fanout=1)        0.003   uut/blk00000360/sig0000061d
+    SLICE_X26Y18.BMUX    Tcinb                 0.292   uut/sig0000011b
+                                                       uut/blk00000360/blk00000362
+    SLICE_X27Y18.A1      net (fanout=1)        0.630   uut/sig0000011a
+    SLICE_X27Y18.CLK     Tas                   0.322   y_out<6>
+                                                       uut/blk000003ae
+                                                       uut/blk0000038f
+    -------------------------------------------------  ---------------------------
+    Total                                     15.761ns (7.574ns logic, 8.187ns route)
+                                                       (48.1% logic, 51.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.751ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk0000038f (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.716ns (Levels of Logic = 29)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk0000038f
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X19Y7.C4       net (fanout=21)       1.391   uut/sig000000e8
+    SLICE_X19Y7.C        Tilo                  0.259   uut/sig0000002c
+                                                       uut/blk000003a9
+    SLICE_X18Y8.B4       net (fanout=2)        0.462   uut/sig0000002d
+    SLICE_X18Y8.CMUX     Topbc                 0.526   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ee
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X19Y8.C3       net (fanout=35)       0.357   uut/sig000000b4
+    SLICE_X19Y8.C        Tilo                  0.259   uut/blk000002a7/sig0000051a
+                                                       uut/blk000002a7/blk000002cb
+    SLICE_X18Y9.AX       net (fanout=1)        0.415   uut/blk000002a7/sig0000051a
+    SLICE_X18Y9.COUT     Taxcy                 0.208   uut/blk000002a7/sig00000516
+                                                       uut/blk000002a7/blk000002bb
+    SLICE_X18Y10.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000516
+    SLICE_X18Y10.COUT    Tbyp                  0.076   uut/blk000002a7/sig00000512
+                                                       uut/blk000002a7/blk000002b7
+    SLICE_X18Y11.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000512
+    SLICE_X18Y11.CMUX    Tcinc                 0.261   uut/sig00000093
+                                                       uut/blk000002a7/blk000002a9
+    SLICE_X19Y10.A6      net (fanout=35)       0.359   uut/sig00000093
+    SLICE_X19Y10.A       Tilo                  0.259   uut/blk00000238/sig00000474
+                                                       uut/blk00000238/blk0000025c
+    SLICE_X20Y9.AX       net (fanout=1)        0.435   uut/blk00000238/sig00000474
+    SLICE_X20Y9.COUT     Taxcy                 0.259   uut/blk00000238/sig00000470
+                                                       uut/blk00000238/blk0000024c
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   uut/blk00000238/sig00000470
+    SLICE_X20Y10.COUT    Tbyp                  0.076   uut/blk00000238/sig0000046c
+                                                       uut/blk00000238/blk00000248
+    SLICE_X20Y11.CIN     net (fanout=1)        0.003   uut/blk00000238/sig0000046c
+    SLICE_X20Y11.CMUX    Tcinc                 0.272   uut/sig00000072
+                                                       uut/blk00000238/blk0000023a
+    SLICE_X21Y11.A6      net (fanout=35)       0.169   uut/sig00000072
+    SLICE_X21Y11.A       Tilo                  0.259   uut/blk000001c9/sig000003ce
+                                                       uut/blk000001c9/blk000001ed
+    SLICE_X20Y12.AX      net (fanout=1)        0.386   uut/blk000001c9/sig000003ce
+    SLICE_X20Y12.COUT    Taxcy                 0.259   uut/blk000001c9/sig000003ca
+                                                       uut/blk000001c9/blk000001dd
+    SLICE_X20Y13.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003ca
+    SLICE_X20Y13.COUT    Tbyp                  0.076   uut/blk000001c9/sig000003c6
+                                                       uut/blk000001c9/blk000001d9
+    SLICE_X20Y14.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003c6
+    SLICE_X20Y14.CMUX    Tcinc                 0.272   uut/sig00000051
+                                                       uut/blk000001c9/blk000001cb
+    SLICE_X21Y14.A6      net (fanout=35)       0.192   uut/sig00000051
+    SLICE_X21Y14.A       Tilo                  0.259   uut/blk0000015a/sig00000328
+                                                       uut/blk0000015a/blk0000017e
+    SLICE_X20Y15.AX      net (fanout=1)        0.386   uut/blk0000015a/sig00000328
+    SLICE_X20Y15.COUT    Taxcy                 0.259   uut/blk0000015a/sig00000324
+                                                       uut/blk0000015a/blk0000016e
+    SLICE_X20Y16.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000324
+    SLICE_X20Y16.COUT    Tbyp                  0.076   uut/sig00000003
+                                                       uut/blk0000015a/blk0000016a
+    SLICE_X20Y17.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000320
+    SLICE_X20Y17.CMUX    Tcinc                 0.272   uut/sig00000030
+                                                       uut/blk0000015a/blk0000015c
+    SLICE_X21Y16.D4      net (fanout=24)       0.467   uut/sig00000030
+    SLICE_X21Y16.D       Tilo                  0.259   uut/blk000000a1/sig00000217
+                                                       uut/blk000000a1/blk000000c5
+    SLICE_X24Y15.AX      net (fanout=1)        0.654   uut/blk000000a1/sig00000217
+    SLICE_X24Y15.COUT    Taxcy                 0.259   uut/blk000000a1/sig00000213
+                                                       uut/blk000000a1/blk000000b5
+    SLICE_X24Y16.CIN     net (fanout=1)        0.003   uut/blk000000a1/sig00000213
+    SLICE_X24Y16.BMUX    Tcinb                 0.260   uut/blk000000a1/sig0000020f
+                                                       uut/blk000000a1/blk000000b1
+    SLICE_X26Y17.B5      net (fanout=1)        0.591   uut/sig0000001e
+    SLICE_X26Y17.COUT    Topcyb                0.380   uut/blk00000360/sig0000061d
+                                                       uut/blk00000360/blk0000037e
+                                                       uut/blk00000360/blk00000370
+    SLICE_X26Y18.CIN     net (fanout=1)        0.003   uut/blk00000360/sig0000061d
+    SLICE_X26Y18.BMUX    Tcinb                 0.292   uut/sig0000011b
+                                                       uut/blk00000360/blk00000362
+    SLICE_X27Y18.A1      net (fanout=1)        0.630   uut/sig0000011a
+    SLICE_X27Y18.CLK     Tas                   0.322   y_out<6>
+                                                       uut/blk000003ae
+                                                       uut/blk0000038f
+    -------------------------------------------------  ---------------------------
+    Total                                     15.716ns (7.438ns logic, 8.278ns route)
+                                                       (47.3% logic, 52.7% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.748ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk0000038f (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.713ns (Levels of Logic = 31)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk0000038f
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X24Y7.C2       net (fanout=21)       0.883   uut/sig000000e8
+    SLICE_X24Y7.C        Tilo                  0.205   uut/sig0000002e
+                                                       uut/blk000003aa
+    SLICE_X18Y6.B6       net (fanout=22)       0.745   uut/blk000002cc/sig0000054a
+    SLICE_X18Y6.COUT     Topcyb                0.380   uut/blk000002cc/sig00000546
+                                                       uut/blk000002cc/blk000002e6
+                                                       uut/blk000002cc/blk000002e0
+    SLICE_X18Y7.CIN      net (fanout=1)        0.003   uut/blk000002cc/sig00000546
+    SLICE_X18Y7.COUT     Tbyp                  0.076   uut/sig000000fb
+                                                       uut/blk000002cc/blk000002dc
+    SLICE_X18Y8.CIN      net (fanout=1)        0.082   uut/blk000002cc/sig00000542
+    SLICE_X18Y8.CMUX     Tcinc                 0.261   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X19Y8.C3       net (fanout=35)       0.357   uut/sig000000b4
+    SLICE_X19Y8.C        Tilo                  0.259   uut/blk000002a7/sig0000051a
+                                                       uut/blk000002a7/blk000002cb
+    SLICE_X18Y9.AX       net (fanout=1)        0.415   uut/blk000002a7/sig0000051a
+    SLICE_X18Y9.COUT     Taxcy                 0.208   uut/blk000002a7/sig00000516
+                                                       uut/blk000002a7/blk000002bb
+    SLICE_X18Y10.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000516
+    SLICE_X18Y10.COUT    Tbyp                  0.076   uut/blk000002a7/sig00000512
+                                                       uut/blk000002a7/blk000002b7
+    SLICE_X18Y11.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000512
+    SLICE_X18Y11.CMUX    Tcinc                 0.261   uut/sig00000093
+                                                       uut/blk000002a7/blk000002a9
+    SLICE_X19Y10.A6      net (fanout=35)       0.359   uut/sig00000093
+    SLICE_X19Y10.A       Tilo                  0.259   uut/blk00000238/sig00000474
+                                                       uut/blk00000238/blk0000025c
+    SLICE_X20Y9.AX       net (fanout=1)        0.435   uut/blk00000238/sig00000474
+    SLICE_X20Y9.COUT     Taxcy                 0.259   uut/blk00000238/sig00000470
+                                                       uut/blk00000238/blk0000024c
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   uut/blk00000238/sig00000470
+    SLICE_X20Y10.COUT    Tbyp                  0.076   uut/blk00000238/sig0000046c
+                                                       uut/blk00000238/blk00000248
+    SLICE_X20Y11.CIN     net (fanout=1)        0.003   uut/blk00000238/sig0000046c
+    SLICE_X20Y11.CMUX    Tcinc                 0.272   uut/sig00000072
+                                                       uut/blk00000238/blk0000023a
+    SLICE_X21Y11.A6      net (fanout=35)       0.169   uut/sig00000072
+    SLICE_X21Y11.A       Tilo                  0.259   uut/blk000001c9/sig000003ce
+                                                       uut/blk000001c9/blk000001ed
+    SLICE_X20Y12.AX      net (fanout=1)        0.386   uut/blk000001c9/sig000003ce
+    SLICE_X20Y12.COUT    Taxcy                 0.259   uut/blk000001c9/sig000003ca
+                                                       uut/blk000001c9/blk000001dd
+    SLICE_X20Y13.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003ca
+    SLICE_X20Y13.COUT    Tbyp                  0.076   uut/blk000001c9/sig000003c6
+                                                       uut/blk000001c9/blk000001d9
+    SLICE_X20Y14.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003c6
+    SLICE_X20Y14.CMUX    Tcinc                 0.272   uut/sig00000051
+                                                       uut/blk000001c9/blk000001cb
+    SLICE_X21Y14.A6      net (fanout=35)       0.192   uut/sig00000051
+    SLICE_X21Y14.A       Tilo                  0.259   uut/blk0000015a/sig00000328
+                                                       uut/blk0000015a/blk0000017e
+    SLICE_X20Y15.AX      net (fanout=1)        0.386   uut/blk0000015a/sig00000328
+    SLICE_X20Y15.COUT    Taxcy                 0.259   uut/blk0000015a/sig00000324
+                                                       uut/blk0000015a/blk0000016e
+    SLICE_X20Y16.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000324
+    SLICE_X20Y16.COUT    Tbyp                  0.076   uut/sig00000003
+                                                       uut/blk0000015a/blk0000016a
+    SLICE_X20Y17.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000320
+    SLICE_X20Y17.CMUX    Tcinc                 0.272   uut/sig00000030
+                                                       uut/blk0000015a/blk0000015c
+    SLICE_X21Y16.D4      net (fanout=24)       0.467   uut/sig00000030
+    SLICE_X21Y16.D       Tilo                  0.259   uut/blk000000a1/sig00000217
+                                                       uut/blk000000a1/blk000000c5
+    SLICE_X24Y15.AX      net (fanout=1)        0.654   uut/blk000000a1/sig00000217
+    SLICE_X24Y15.COUT    Taxcy                 0.259   uut/blk000000a1/sig00000213
+                                                       uut/blk000000a1/blk000000b5
+    SLICE_X24Y16.CIN     net (fanout=1)        0.003   uut/blk000000a1/sig00000213
+    SLICE_X24Y16.BMUX    Tcinb                 0.260   uut/blk000000a1/sig0000020f
+                                                       uut/blk000000a1/blk000000b1
+    SLICE_X26Y17.B5      net (fanout=1)        0.591   uut/sig0000001e
+    SLICE_X26Y17.COUT    Topcyb                0.380   uut/blk00000360/sig0000061d
+                                                       uut/blk00000360/blk0000037e
+                                                       uut/blk00000360/blk00000370
+    SLICE_X26Y18.CIN     net (fanout=1)        0.003   uut/blk00000360/sig0000061d
+    SLICE_X26Y18.BMUX    Tcinb                 0.292   uut/sig0000011b
+                                                       uut/blk00000360/blk00000362
+    SLICE_X27Y18.A1      net (fanout=1)        0.630   uut/sig0000011a
+    SLICE_X27Y18.CLK     Tas                   0.322   y_out<6>
+                                                       uut/blk000003ae
+                                                       uut/blk0000038f
+    -------------------------------------------------  ---------------------------
+    Total                                     15.713ns (7.575ns logic, 8.138ns route)
+                                                       (48.2% logic, 51.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point uut/blk0000038e (SLICE_X25Y18.B6), 139852609778 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.791ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk0000038e (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.749ns (Levels of Logic = 20)
+  Clock Path Skew:      -0.007ns (0.347 - 0.354)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk0000038e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X24Y7.C2       net (fanout=21)       0.883   uut/sig000000e8
+    SLICE_X24Y7.C        Tilo                  0.205   uut/sig0000002e
+                                                       uut/blk000003aa
+    SLICE_X18Y6.A4       net (fanout=22)       0.794   uut/blk000002cc/sig0000054a
+    SLICE_X18Y6.COUT     Topcya                0.379   uut/blk000002cc/sig00000546
+                                                       uut/blk000002cc/blk000002e4
+                                                       uut/blk000002cc/blk000002e0
+    SLICE_X18Y7.CIN      net (fanout=1)        0.003   uut/blk000002cc/sig00000546
+    SLICE_X18Y7.COUT     Tbyp                  0.076   uut/sig000000fb
+                                                       uut/blk000002cc/blk000002dc
+    SLICE_X18Y8.CIN      net (fanout=1)        0.082   uut/blk000002cc/sig00000542
+    SLICE_X18Y8.CMUX     Tcinc                 0.261   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X15Y9.D6       net (fanout=35)       0.887   uut/sig000000b4
+    SLICE_X15Y9.D        Tilo                  0.259   uut/blk0000025d/sig000004af
+                                                       uut/blk0000025d/blk00000281
+    SLICE_X14Y10.AX      net (fanout=1)        0.637   uut/blk0000025d/sig000004af
+    SLICE_X14Y10.COUT    Taxcy                 0.208   uut/blk0000025d/sig000004ab
+                                                       uut/blk0000025d/blk00000271
+    SLICE_X14Y11.CIN     net (fanout=1)        0.003   uut/blk0000025d/sig000004ab
+    SLICE_X14Y11.COUT    Tbyp                  0.076   uut/blk0000025d/sig000004a7
+                                                       uut/blk0000025d/blk0000026d
+    SLICE_X14Y12.CIN     net (fanout=1)        0.003   uut/blk0000025d/sig000004a7
+    SLICE_X14Y12.CMUX    Tcinc                 0.261   uut/sig000000b2
+                                                       uut/blk0000025d/blk0000025f
+    SLICE_X18Y15.C5      net (fanout=5)        1.318   uut/sig000000b2
+    SLICE_X18Y15.CMUX    Topcc                 0.413   uut/sig00000071
+                                                       uut/blk00000213/blk00000236
+                                                       uut/blk00000213/blk00000215
+    SLICE_X22Y13.C5      net (fanout=6)        1.000   uut/sig00000071
+    SLICE_X22Y13.CMUX    Topcc                 0.413   uut/sig00000070
+                                                       uut/blk0000017f/blk000001a2
+                                                       uut/blk0000017f/blk00000181
+    SLICE_X26Y14.D6      net (fanout=7)        0.886   uut/sig00000070
+    SLICE_X26Y14.COUT    Topcyd                0.261   uut/blk00000135/sig000002f0
+                                                       uut/blk00000135/blk00000155
+                                                       uut/blk00000135/blk00000145
+    SLICE_X26Y15.CIN     net (fanout=1)        0.003   uut/blk00000135/sig000002f0
+    SLICE_X26Y15.BMUX    Tcinb                 0.292   uut/sig0000002f
+                                                       uut/blk00000135/blk00000137
+    SLICE_X28Y17.B5      net (fanout=3)        0.762   uut/sig00000044
+    SLICE_X28Y17.BMUX    Topbb                 0.368   uut/sig00000018
+                                                       uut/blk000000c6/blk000000e8
+                                                       uut/blk000000c6/blk000000c8
+    SLICE_X26Y21.B5      net (fanout=1)        0.789   uut/sig00000017
+    SLICE_X26Y21.CMUX    Topbc                 0.526   uut/sig00000113
+                                                       uut/blk0000033b/blk0000035d
+                                                       uut/blk0000033b/blk0000033d
+    SLICE_X25Y18.B6      net (fanout=1)        0.546   uut/sig00000113
+    SLICE_X25Y18.CLK     Tas                   0.322   Mmux_y_out[7]_GND_5_o_mux_9_OUT_rs_lut<7>
+                                                       uut/blk000003ac
+                                                       uut/blk0000038e
+    -------------------------------------------------  ---------------------------
+    Total                                     15.749ns (5.799ns logic, 9.950ns route)
+                                                       (36.8% logic, 63.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.785ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk0000038e (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.743ns (Levels of Logic = 20)
+  Clock Path Skew:      -0.007ns (0.347 - 0.354)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk0000038e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X24Y7.C2       net (fanout=21)       0.883   uut/sig000000e8
+    SLICE_X24Y7.C        Tilo                  0.205   uut/sig0000002e
+                                                       uut/blk000003aa
+    SLICE_X18Y6.A4       net (fanout=22)       0.794   uut/blk000002cc/sig0000054a
+    SLICE_X18Y6.COUT     Topcya                0.379   uut/blk000002cc/sig00000546
+                                                       uut/blk000002cc/blk000002e4
+                                                       uut/blk000002cc/blk000002e0
+    SLICE_X18Y7.CIN      net (fanout=1)        0.003   uut/blk000002cc/sig00000546
+    SLICE_X18Y7.COUT     Tbyp                  0.076   uut/sig000000fb
+                                                       uut/blk000002cc/blk000002dc
+    SLICE_X18Y8.CIN      net (fanout=1)        0.082   uut/blk000002cc/sig00000542
+    SLICE_X18Y8.CMUX     Tcinc                 0.261   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X15Y9.D6       net (fanout=35)       0.887   uut/sig000000b4
+    SLICE_X15Y9.D        Tilo                  0.259   uut/blk0000025d/sig000004af
+                                                       uut/blk0000025d/blk00000281
+    SLICE_X14Y10.AX      net (fanout=1)        0.637   uut/blk0000025d/sig000004af
+    SLICE_X14Y10.COUT    Taxcy                 0.208   uut/blk0000025d/sig000004ab
+                                                       uut/blk0000025d/blk00000271
+    SLICE_X14Y11.CIN     net (fanout=1)        0.003   uut/blk0000025d/sig000004ab
+    SLICE_X14Y11.COUT    Tbyp                  0.076   uut/blk0000025d/sig000004a7
+                                                       uut/blk0000025d/blk0000026d
+    SLICE_X14Y12.CIN     net (fanout=1)        0.003   uut/blk0000025d/sig000004a7
+    SLICE_X14Y12.CMUX    Tcinc                 0.261   uut/sig000000b2
+                                                       uut/blk0000025d/blk0000025f
+    SLICE_X18Y15.C5      net (fanout=5)        1.318   uut/sig000000b2
+    SLICE_X18Y15.CMUX    Topcc                 0.413   uut/sig00000071
+                                                       uut/blk00000213/blk00000236
+                                                       uut/blk00000213/blk00000215
+    SLICE_X22Y13.A5      net (fanout=6)        0.870   uut/sig00000071
+    SLICE_X22Y13.CMUX    Topac                 0.537   uut/sig00000070
+                                                       uut/blk0000017f/blk000001a0
+                                                       uut/blk0000017f/blk00000181
+    SLICE_X26Y14.D6      net (fanout=7)        0.886   uut/sig00000070
+    SLICE_X26Y14.COUT    Topcyd                0.261   uut/blk00000135/sig000002f0
+                                                       uut/blk00000135/blk00000155
+                                                       uut/blk00000135/blk00000145
+    SLICE_X26Y15.CIN     net (fanout=1)        0.003   uut/blk00000135/sig000002f0
+    SLICE_X26Y15.BMUX    Tcinb                 0.292   uut/sig0000002f
+                                                       uut/blk00000135/blk00000137
+    SLICE_X28Y17.B5      net (fanout=3)        0.762   uut/sig00000044
+    SLICE_X28Y17.BMUX    Topbb                 0.368   uut/sig00000018
+                                                       uut/blk000000c6/blk000000e8
+                                                       uut/blk000000c6/blk000000c8
+    SLICE_X26Y21.B5      net (fanout=1)        0.789   uut/sig00000017
+    SLICE_X26Y21.CMUX    Topbc                 0.526   uut/sig00000113
+                                                       uut/blk0000033b/blk0000035d
+                                                       uut/blk0000033b/blk0000033d
+    SLICE_X25Y18.B6      net (fanout=1)        0.546   uut/sig00000113
+    SLICE_X25Y18.CLK     Tas                   0.322   Mmux_y_out[7]_GND_5_o_mux_9_OUT_rs_lut<7>
+                                                       uut/blk000003ac
+                                                       uut/blk0000038e
+    -------------------------------------------------  ---------------------------
+    Total                                     15.743ns (5.923ns logic, 9.820ns route)
+                                                       (37.6% logic, 62.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.746ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk0000038e (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.704ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.007ns (0.347 - 0.354)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk0000038e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X19Y7.C4       net (fanout=21)       1.391   uut/sig000000e8
+    SLICE_X19Y7.C        Tilo                  0.259   uut/sig0000002c
+                                                       uut/blk000003a9
+    SLICE_X18Y8.B4       net (fanout=2)        0.462   uut/sig0000002d
+    SLICE_X18Y8.CMUX     Topbc                 0.526   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ee
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X15Y9.D6       net (fanout=35)       0.887   uut/sig000000b4
+    SLICE_X15Y9.D        Tilo                  0.259   uut/blk0000025d/sig000004af
+                                                       uut/blk0000025d/blk00000281
+    SLICE_X14Y10.AX      net (fanout=1)        0.637   uut/blk0000025d/sig000004af
+    SLICE_X14Y10.COUT    Taxcy                 0.208   uut/blk0000025d/sig000004ab
+                                                       uut/blk0000025d/blk00000271
+    SLICE_X14Y11.CIN     net (fanout=1)        0.003   uut/blk0000025d/sig000004ab
+    SLICE_X14Y11.COUT    Tbyp                  0.076   uut/blk0000025d/sig000004a7
+                                                       uut/blk0000025d/blk0000026d
+    SLICE_X14Y12.CIN     net (fanout=1)        0.003   uut/blk0000025d/sig000004a7
+    SLICE_X14Y12.CMUX    Tcinc                 0.261   uut/sig000000b2
+                                                       uut/blk0000025d/blk0000025f
+    SLICE_X18Y15.C5      net (fanout=5)        1.318   uut/sig000000b2
+    SLICE_X18Y15.CMUX    Topcc                 0.413   uut/sig00000071
+                                                       uut/blk00000213/blk00000236
+                                                       uut/blk00000213/blk00000215
+    SLICE_X22Y13.C5      net (fanout=6)        1.000   uut/sig00000071
+    SLICE_X22Y13.CMUX    Topcc                 0.413   uut/sig00000070
+                                                       uut/blk0000017f/blk000001a2
+                                                       uut/blk0000017f/blk00000181
+    SLICE_X26Y14.D6      net (fanout=7)        0.886   uut/sig00000070
+    SLICE_X26Y14.COUT    Topcyd                0.261   uut/blk00000135/sig000002f0
+                                                       uut/blk00000135/blk00000155
+                                                       uut/blk00000135/blk00000145
+    SLICE_X26Y15.CIN     net (fanout=1)        0.003   uut/blk00000135/sig000002f0
+    SLICE_X26Y15.BMUX    Tcinb                 0.292   uut/sig0000002f
+                                                       uut/blk00000135/blk00000137
+    SLICE_X28Y17.B5      net (fanout=3)        0.762   uut/sig00000044
+    SLICE_X28Y17.BMUX    Topbb                 0.368   uut/sig00000018
+                                                       uut/blk000000c6/blk000000e8
+                                                       uut/blk000000c6/blk000000c8
+    SLICE_X26Y21.B5      net (fanout=1)        0.789   uut/sig00000017
+    SLICE_X26Y21.CMUX    Topbc                 0.526   uut/sig00000113
+                                                       uut/blk0000033b/blk0000035d
+                                                       uut/blk0000033b/blk0000033d
+    SLICE_X25Y18.B6      net (fanout=1)        0.546   uut/sig00000113
+    SLICE_X25Y18.CLK     Tas                   0.322   Mmux_y_out[7]_GND_5_o_mux_9_OUT_rs_lut<7>
+                                                       uut/blk000003ac
+                                                       uut/blk0000038e
+    -------------------------------------------------  ---------------------------
+    Total                                     15.704ns (5.663ns logic, 10.041ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point uut/blk00000390 (SLICE_X27Y19.A2), 88374240730 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.703ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk00000390 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.667ns (Levels of Logic = 31)
+  Clock Path Skew:      -0.001ns (0.353 - 0.354)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk00000390
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X24Y7.C2       net (fanout=21)       0.883   uut/sig000000e8
+    SLICE_X24Y7.C        Tilo                  0.205   uut/sig0000002e
+                                                       uut/blk000003aa
+    SLICE_X18Y6.A4       net (fanout=22)       0.794   uut/blk000002cc/sig0000054a
+    SLICE_X18Y6.COUT     Topcya                0.379   uut/blk000002cc/sig00000546
+                                                       uut/blk000002cc/blk000002e4
+                                                       uut/blk000002cc/blk000002e0
+    SLICE_X18Y7.CIN      net (fanout=1)        0.003   uut/blk000002cc/sig00000546
+    SLICE_X18Y7.COUT     Tbyp                  0.076   uut/sig000000fb
+                                                       uut/blk000002cc/blk000002dc
+    SLICE_X18Y8.CIN      net (fanout=1)        0.082   uut/blk000002cc/sig00000542
+    SLICE_X18Y8.CMUX     Tcinc                 0.261   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X19Y8.C3       net (fanout=35)       0.357   uut/sig000000b4
+    SLICE_X19Y8.C        Tilo                  0.259   uut/blk000002a7/sig0000051a
+                                                       uut/blk000002a7/blk000002cb
+    SLICE_X18Y9.AX       net (fanout=1)        0.415   uut/blk000002a7/sig0000051a
+    SLICE_X18Y9.COUT     Taxcy                 0.208   uut/blk000002a7/sig00000516
+                                                       uut/blk000002a7/blk000002bb
+    SLICE_X18Y10.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000516
+    SLICE_X18Y10.COUT    Tbyp                  0.076   uut/blk000002a7/sig00000512
+                                                       uut/blk000002a7/blk000002b7
+    SLICE_X18Y11.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000512
+    SLICE_X18Y11.CMUX    Tcinc                 0.261   uut/sig00000093
+                                                       uut/blk000002a7/blk000002a9
+    SLICE_X19Y10.A6      net (fanout=35)       0.359   uut/sig00000093
+    SLICE_X19Y10.A       Tilo                  0.259   uut/blk00000238/sig00000474
+                                                       uut/blk00000238/blk0000025c
+    SLICE_X20Y9.AX       net (fanout=1)        0.435   uut/blk00000238/sig00000474
+    SLICE_X20Y9.COUT     Taxcy                 0.259   uut/blk00000238/sig00000470
+                                                       uut/blk00000238/blk0000024c
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   uut/blk00000238/sig00000470
+    SLICE_X20Y10.COUT    Tbyp                  0.076   uut/blk00000238/sig0000046c
+                                                       uut/blk00000238/blk00000248
+    SLICE_X20Y11.CIN     net (fanout=1)        0.003   uut/blk00000238/sig0000046c
+    SLICE_X20Y11.CMUX    Tcinc                 0.272   uut/sig00000072
+                                                       uut/blk00000238/blk0000023a
+    SLICE_X21Y11.A6      net (fanout=35)       0.169   uut/sig00000072
+    SLICE_X21Y11.A       Tilo                  0.259   uut/blk000001c9/sig000003ce
+                                                       uut/blk000001c9/blk000001ed
+    SLICE_X20Y12.AX      net (fanout=1)        0.386   uut/blk000001c9/sig000003ce
+    SLICE_X20Y12.COUT    Taxcy                 0.259   uut/blk000001c9/sig000003ca
+                                                       uut/blk000001c9/blk000001dd
+    SLICE_X20Y13.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003ca
+    SLICE_X20Y13.COUT    Tbyp                  0.076   uut/blk000001c9/sig000003c6
+                                                       uut/blk000001c9/blk000001d9
+    SLICE_X20Y14.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003c6
+    SLICE_X20Y14.CMUX    Tcinc                 0.272   uut/sig00000051
+                                                       uut/blk000001c9/blk000001cb
+    SLICE_X21Y14.A6      net (fanout=35)       0.192   uut/sig00000051
+    SLICE_X21Y14.A       Tilo                  0.259   uut/blk0000015a/sig00000328
+                                                       uut/blk0000015a/blk0000017e
+    SLICE_X20Y15.AX      net (fanout=1)        0.386   uut/blk0000015a/sig00000328
+    SLICE_X20Y15.COUT    Taxcy                 0.259   uut/blk0000015a/sig00000324
+                                                       uut/blk0000015a/blk0000016e
+    SLICE_X20Y16.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000324
+    SLICE_X20Y16.COUT    Tbyp                  0.076   uut/sig00000003
+                                                       uut/blk0000015a/blk0000016a
+    SLICE_X20Y17.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000320
+    SLICE_X20Y17.CMUX    Tcinc                 0.272   uut/sig00000030
+                                                       uut/blk0000015a/blk0000015c
+    SLICE_X21Y16.D4      net (fanout=24)       0.467   uut/sig00000030
+    SLICE_X21Y16.D       Tilo                  0.259   uut/blk000000a1/sig00000217
+                                                       uut/blk000000a1/blk000000c5
+    SLICE_X24Y15.AX      net (fanout=1)        0.654   uut/blk000000a1/sig00000217
+    SLICE_X24Y15.COUT    Taxcy                 0.259   uut/blk000000a1/sig00000213
+                                                       uut/blk000000a1/blk000000b5
+    SLICE_X24Y16.CIN     net (fanout=1)        0.003   uut/blk000000a1/sig00000213
+    SLICE_X24Y16.BMUX    Tcinb                 0.260   uut/blk000000a1/sig0000020f
+                                                       uut/blk000000a1/blk000000b1
+    SLICE_X26Y17.B5      net (fanout=1)        0.591   uut/sig0000001e
+    SLICE_X26Y17.COUT    Topcyb                0.380   uut/blk00000360/sig0000061d
+                                                       uut/blk00000360/blk0000037e
+                                                       uut/blk00000360/blk00000370
+    SLICE_X26Y18.CIN     net (fanout=1)        0.003   uut/blk00000360/sig0000061d
+    SLICE_X26Y18.AMUX    Tcina                 0.202   uut/sig0000011b
+                                                       uut/blk00000360/blk00000362
+    SLICE_X27Y19.A2      net (fanout=1)        0.626   uut/sig00000119
+    SLICE_X27Y19.CLK     Tas                   0.322   y_out<5>
+                                                       uut/blk000003b0
+                                                       uut/blk00000390
+    -------------------------------------------------  ---------------------------
+    Total                                     15.667ns (7.484ns logic, 8.183ns route)
+                                                       (47.8% logic, 52.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.658ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk00000390 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.622ns (Levels of Logic = 29)
+  Clock Path Skew:      -0.001ns (0.353 - 0.354)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk00000390
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X19Y7.C4       net (fanout=21)       1.391   uut/sig000000e8
+    SLICE_X19Y7.C        Tilo                  0.259   uut/sig0000002c
+                                                       uut/blk000003a9
+    SLICE_X18Y8.B4       net (fanout=2)        0.462   uut/sig0000002d
+    SLICE_X18Y8.CMUX     Topbc                 0.526   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ee
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X19Y8.C3       net (fanout=35)       0.357   uut/sig000000b4
+    SLICE_X19Y8.C        Tilo                  0.259   uut/blk000002a7/sig0000051a
+                                                       uut/blk000002a7/blk000002cb
+    SLICE_X18Y9.AX       net (fanout=1)        0.415   uut/blk000002a7/sig0000051a
+    SLICE_X18Y9.COUT     Taxcy                 0.208   uut/blk000002a7/sig00000516
+                                                       uut/blk000002a7/blk000002bb
+    SLICE_X18Y10.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000516
+    SLICE_X18Y10.COUT    Tbyp                  0.076   uut/blk000002a7/sig00000512
+                                                       uut/blk000002a7/blk000002b7
+    SLICE_X18Y11.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000512
+    SLICE_X18Y11.CMUX    Tcinc                 0.261   uut/sig00000093
+                                                       uut/blk000002a7/blk000002a9
+    SLICE_X19Y10.A6      net (fanout=35)       0.359   uut/sig00000093
+    SLICE_X19Y10.A       Tilo                  0.259   uut/blk00000238/sig00000474
+                                                       uut/blk00000238/blk0000025c
+    SLICE_X20Y9.AX       net (fanout=1)        0.435   uut/blk00000238/sig00000474
+    SLICE_X20Y9.COUT     Taxcy                 0.259   uut/blk00000238/sig00000470
+                                                       uut/blk00000238/blk0000024c
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   uut/blk00000238/sig00000470
+    SLICE_X20Y10.COUT    Tbyp                  0.076   uut/blk00000238/sig0000046c
+                                                       uut/blk00000238/blk00000248
+    SLICE_X20Y11.CIN     net (fanout=1)        0.003   uut/blk00000238/sig0000046c
+    SLICE_X20Y11.CMUX    Tcinc                 0.272   uut/sig00000072
+                                                       uut/blk00000238/blk0000023a
+    SLICE_X21Y11.A6      net (fanout=35)       0.169   uut/sig00000072
+    SLICE_X21Y11.A       Tilo                  0.259   uut/blk000001c9/sig000003ce
+                                                       uut/blk000001c9/blk000001ed
+    SLICE_X20Y12.AX      net (fanout=1)        0.386   uut/blk000001c9/sig000003ce
+    SLICE_X20Y12.COUT    Taxcy                 0.259   uut/blk000001c9/sig000003ca
+                                                       uut/blk000001c9/blk000001dd
+    SLICE_X20Y13.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003ca
+    SLICE_X20Y13.COUT    Tbyp                  0.076   uut/blk000001c9/sig000003c6
+                                                       uut/blk000001c9/blk000001d9
+    SLICE_X20Y14.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003c6
+    SLICE_X20Y14.CMUX    Tcinc                 0.272   uut/sig00000051
+                                                       uut/blk000001c9/blk000001cb
+    SLICE_X21Y14.A6      net (fanout=35)       0.192   uut/sig00000051
+    SLICE_X21Y14.A       Tilo                  0.259   uut/blk0000015a/sig00000328
+                                                       uut/blk0000015a/blk0000017e
+    SLICE_X20Y15.AX      net (fanout=1)        0.386   uut/blk0000015a/sig00000328
+    SLICE_X20Y15.COUT    Taxcy                 0.259   uut/blk0000015a/sig00000324
+                                                       uut/blk0000015a/blk0000016e
+    SLICE_X20Y16.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000324
+    SLICE_X20Y16.COUT    Tbyp                  0.076   uut/sig00000003
+                                                       uut/blk0000015a/blk0000016a
+    SLICE_X20Y17.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000320
+    SLICE_X20Y17.CMUX    Tcinc                 0.272   uut/sig00000030
+                                                       uut/blk0000015a/blk0000015c
+    SLICE_X21Y16.D4      net (fanout=24)       0.467   uut/sig00000030
+    SLICE_X21Y16.D       Tilo                  0.259   uut/blk000000a1/sig00000217
+                                                       uut/blk000000a1/blk000000c5
+    SLICE_X24Y15.AX      net (fanout=1)        0.654   uut/blk000000a1/sig00000217
+    SLICE_X24Y15.COUT    Taxcy                 0.259   uut/blk000000a1/sig00000213
+                                                       uut/blk000000a1/blk000000b5
+    SLICE_X24Y16.CIN     net (fanout=1)        0.003   uut/blk000000a1/sig00000213
+    SLICE_X24Y16.BMUX    Tcinb                 0.260   uut/blk000000a1/sig0000020f
+                                                       uut/blk000000a1/blk000000b1
+    SLICE_X26Y17.B5      net (fanout=1)        0.591   uut/sig0000001e
+    SLICE_X26Y17.COUT    Topcyb                0.380   uut/blk00000360/sig0000061d
+                                                       uut/blk00000360/blk0000037e
+                                                       uut/blk00000360/blk00000370
+    SLICE_X26Y18.CIN     net (fanout=1)        0.003   uut/blk00000360/sig0000061d
+    SLICE_X26Y18.AMUX    Tcina                 0.202   uut/sig0000011b
+                                                       uut/blk00000360/blk00000362
+    SLICE_X27Y19.A2      net (fanout=1)        0.626   uut/sig00000119
+    SLICE_X27Y19.CLK     Tas                   0.322   y_out<5>
+                                                       uut/blk000003b0
+                                                       uut/blk00000390
+    -------------------------------------------------  ---------------------------
+    Total                                     15.622ns (7.348ns logic, 8.274ns route)
+                                                       (47.0% logic, 53.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -5.655ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               uut/blk000003bc (FF)
+  Destination:          uut/blk00000390 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      15.619ns (Levels of Logic = 31)
+  Clock Path Skew:      -0.001ns (0.353 - 0.354)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: uut/blk000003bc to uut/blk00000390
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y4.DQ       Tcko                  0.408   uut/sig0000011c
+                                                       uut/blk000003bc
+    SLICE_X20Y2.C5       net (fanout=2)        0.551   uut/sig0000011c
+    SLICE_X20Y2.C        Tilo                  0.205   uut/blk00000032/sig00000177
+                                                       uut/blk000003c3
+    SLICE_X21Y3.D5       net (fanout=11)       0.411   uut/sig0000011d
+    SLICE_X21Y3.D        Tilo                  0.259   uut/blk00000032/sig0000017b
+                                                       uut/blk00000032/blk00000056
+    SLICE_X20Y2.AX       net (fanout=1)        0.386   uut/blk00000032/sig0000017b
+    SLICE_X20Y2.COUT     Taxcy                 0.259   uut/blk00000032/sig00000177
+                                                       uut/blk00000032/blk00000046
+    SLICE_X20Y3.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000177
+    SLICE_X20Y3.COUT     Tbyp                  0.076   uut/blk00000032/sig00000173
+                                                       uut/blk00000032/blk00000042
+    SLICE_X20Y4.CIN      net (fanout=1)        0.003   uut/blk00000032/sig00000173
+    SLICE_X20Y4.CMUX     Tcinc                 0.272   uut/sig0000011c
+                                                       uut/blk00000032/blk00000034
+    SLICE_X24Y7.C2       net (fanout=21)       0.883   uut/sig000000e8
+    SLICE_X24Y7.C        Tilo                  0.205   uut/sig0000002e
+                                                       uut/blk000003aa
+    SLICE_X18Y6.B6       net (fanout=22)       0.745   uut/blk000002cc/sig0000054a
+    SLICE_X18Y6.COUT     Topcyb                0.380   uut/blk000002cc/sig00000546
+                                                       uut/blk000002cc/blk000002e6
+                                                       uut/blk000002cc/blk000002e0
+    SLICE_X18Y7.CIN      net (fanout=1)        0.003   uut/blk000002cc/sig00000546
+    SLICE_X18Y7.COUT     Tbyp                  0.076   uut/sig000000fb
+                                                       uut/blk000002cc/blk000002dc
+    SLICE_X18Y8.CIN      net (fanout=1)        0.082   uut/blk000002cc/sig00000542
+    SLICE_X18Y8.CMUX     Tcinc                 0.261   uut/sig000000b4
+                                                       uut/blk000002cc/blk000002ce
+    SLICE_X19Y8.C3       net (fanout=35)       0.357   uut/sig000000b4
+    SLICE_X19Y8.C        Tilo                  0.259   uut/blk000002a7/sig0000051a
+                                                       uut/blk000002a7/blk000002cb
+    SLICE_X18Y9.AX       net (fanout=1)        0.415   uut/blk000002a7/sig0000051a
+    SLICE_X18Y9.COUT     Taxcy                 0.208   uut/blk000002a7/sig00000516
+                                                       uut/blk000002a7/blk000002bb
+    SLICE_X18Y10.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000516
+    SLICE_X18Y10.COUT    Tbyp                  0.076   uut/blk000002a7/sig00000512
+                                                       uut/blk000002a7/blk000002b7
+    SLICE_X18Y11.CIN     net (fanout=1)        0.003   uut/blk000002a7/sig00000512
+    SLICE_X18Y11.CMUX    Tcinc                 0.261   uut/sig00000093
+                                                       uut/blk000002a7/blk000002a9
+    SLICE_X19Y10.A6      net (fanout=35)       0.359   uut/sig00000093
+    SLICE_X19Y10.A       Tilo                  0.259   uut/blk00000238/sig00000474
+                                                       uut/blk00000238/blk0000025c
+    SLICE_X20Y9.AX       net (fanout=1)        0.435   uut/blk00000238/sig00000474
+    SLICE_X20Y9.COUT     Taxcy                 0.259   uut/blk00000238/sig00000470
+                                                       uut/blk00000238/blk0000024c
+    SLICE_X20Y10.CIN     net (fanout=1)        0.003   uut/blk00000238/sig00000470
+    SLICE_X20Y10.COUT    Tbyp                  0.076   uut/blk00000238/sig0000046c
+                                                       uut/blk00000238/blk00000248
+    SLICE_X20Y11.CIN     net (fanout=1)        0.003   uut/blk00000238/sig0000046c
+    SLICE_X20Y11.CMUX    Tcinc                 0.272   uut/sig00000072
+                                                       uut/blk00000238/blk0000023a
+    SLICE_X21Y11.A6      net (fanout=35)       0.169   uut/sig00000072
+    SLICE_X21Y11.A       Tilo                  0.259   uut/blk000001c9/sig000003ce
+                                                       uut/blk000001c9/blk000001ed
+    SLICE_X20Y12.AX      net (fanout=1)        0.386   uut/blk000001c9/sig000003ce
+    SLICE_X20Y12.COUT    Taxcy                 0.259   uut/blk000001c9/sig000003ca
+                                                       uut/blk000001c9/blk000001dd
+    SLICE_X20Y13.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003ca
+    SLICE_X20Y13.COUT    Tbyp                  0.076   uut/blk000001c9/sig000003c6
+                                                       uut/blk000001c9/blk000001d9
+    SLICE_X20Y14.CIN     net (fanout=1)        0.003   uut/blk000001c9/sig000003c6
+    SLICE_X20Y14.CMUX    Tcinc                 0.272   uut/sig00000051
+                                                       uut/blk000001c9/blk000001cb
+    SLICE_X21Y14.A6      net (fanout=35)       0.192   uut/sig00000051
+    SLICE_X21Y14.A       Tilo                  0.259   uut/blk0000015a/sig00000328
+                                                       uut/blk0000015a/blk0000017e
+    SLICE_X20Y15.AX      net (fanout=1)        0.386   uut/blk0000015a/sig00000328
+    SLICE_X20Y15.COUT    Taxcy                 0.259   uut/blk0000015a/sig00000324
+                                                       uut/blk0000015a/blk0000016e
+    SLICE_X20Y16.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000324
+    SLICE_X20Y16.COUT    Tbyp                  0.076   uut/sig00000003
+                                                       uut/blk0000015a/blk0000016a
+    SLICE_X20Y17.CIN     net (fanout=1)        0.003   uut/blk0000015a/sig00000320
+    SLICE_X20Y17.CMUX    Tcinc                 0.272   uut/sig00000030
+                                                       uut/blk0000015a/blk0000015c
+    SLICE_X21Y16.D4      net (fanout=24)       0.467   uut/sig00000030
+    SLICE_X21Y16.D       Tilo                  0.259   uut/blk000000a1/sig00000217
+                                                       uut/blk000000a1/blk000000c5
+    SLICE_X24Y15.AX      net (fanout=1)        0.654   uut/blk000000a1/sig00000217
+    SLICE_X24Y15.COUT    Taxcy                 0.259   uut/blk000000a1/sig00000213
+                                                       uut/blk000000a1/blk000000b5
+    SLICE_X24Y16.CIN     net (fanout=1)        0.003   uut/blk000000a1/sig00000213
+    SLICE_X24Y16.BMUX    Tcinb                 0.260   uut/blk000000a1/sig0000020f
+                                                       uut/blk000000a1/blk000000b1
+    SLICE_X26Y17.B5      net (fanout=1)        0.591   uut/sig0000001e
+    SLICE_X26Y17.COUT    Topcyb                0.380   uut/blk00000360/sig0000061d
+                                                       uut/blk00000360/blk0000037e
+                                                       uut/blk00000360/blk00000370
+    SLICE_X26Y18.CIN     net (fanout=1)        0.003   uut/blk00000360/sig0000061d
+    SLICE_X26Y18.AMUX    Tcina                 0.202   uut/sig0000011b
+                                                       uut/blk00000360/blk00000362
+    SLICE_X27Y19.A2      net (fanout=1)        0.626   uut/sig00000119
+    SLICE_X27Y19.CLK     Tas                   0.322   y_out<5>
+                                                       uut/blk000003b0
+                                                       uut/blk00000390
+    -------------------------------------------------  ---------------------------
+    Total                                     15.619ns (7.485ns logic, 8.134ns route)
+                                                       (47.9% logic, 52.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point slow_clk (SLICE_X17Y41.D6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.439ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               slow_clk (FF)
+  Destination:          slow_clk (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.439ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: slow_clk to slow_clk
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X17Y41.DQ      Tcko                  0.198   slow_clk
+                                                       slow_clk
+    SLICE_X17Y41.D6      net (fanout=12)       0.026   slow_clk
+    SLICE_X17Y41.CLK     Tah         (-Th)    -0.215   slow_clk
+                                                       slow_clk_INV_4_o1_INV_0
+                                                       slow_clk
+    -------------------------------------------------  ---------------------------
+    Total                                      0.439ns (0.413ns logic, 0.026ns route)
+                                                       (94.1% logic, 5.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point uut/blk0000038e (SLICE_X25Y18.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.756ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uut/blk00000004 (FF)
+  Destination:          uut/blk0000038e (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.768ns (Levels of Logic = 0)
+  Clock Path Skew:      0.012ns (0.091 - 0.079)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: uut/blk00000004 to uut/blk0000038e
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y16.DQ      Tcko                  0.200   uut/sig00000003
+                                                       uut/blk00000004
+    SLICE_X25Y18.CE      net (fanout=7)        0.381   uut/sig00000003
+    SLICE_X25Y18.CLK     Tckce       (-Th)    -0.187   Mmux_y_out[7]_GND_5_o_mux_9_OUT_rs_lut<7>
+                                                       uut/blk0000038e
+    -------------------------------------------------  ---------------------------
+    Total                                      0.768ns (0.387ns logic, 0.381ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point uut/blk00000393 (SLICE_X27Y16.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.786ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               uut/blk00000004 (FF)
+  Destination:          uut/blk00000393 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.807ns (Levels of Logic = 0)
+  Clock Path Skew:      0.021ns (0.100 - 0.079)
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: uut/blk00000004 to uut/blk00000393
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X20Y16.DQ      Tcko                  0.200   uut/sig00000003
+                                                       uut/blk00000004
+    SLICE_X27Y16.CE      net (fanout=7)        0.425   uut/sig00000003
+    SLICE_X27Y16.CLK     Tckce       (-Th)    -0.182   y_out<2>
+                                                       uut/blk00000393
+    -------------------------------------------------  ---------------------------
+    Total                                      0.807ns (0.382ns logic, 0.425ns route)
+                                                       (47.3% logic, 52.7% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.270ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGMUX_X3Y13.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 9.570ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 0.430ns (2325.581MHz) (Tcp)
+  Physical resource: _i000012<20>/CLK
+  Logical resource: _i000012_17/CK
+  Location pin: SLICE_X16Y48.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 9.570ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.215ns (Trpw)
+  Physical resource: _i000012<20>/SR
+  Logical resource: _i000012_17/SR
+  Location pin: SLICE_X16Y48.SR
+  Clock network: rst_IBUF
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   15.796|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 16  Score: 89162  (Setup/Max: 89162, Hold: 0)
+
+Constraints cover 1074764384830 paths, 0 nets, and 1141 connections
+
+Design statistics:
+   Minimum period:  15.796ns{1}   (Maximum frequency:  63.307MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Dec 31 19:56:25 2013 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 400 MB
+
+
+

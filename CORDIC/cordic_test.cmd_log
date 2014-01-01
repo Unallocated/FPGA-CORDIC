@@ -1,0 +1,43 @@
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -i -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_test_map.ncd cordic_test.ngd cordic_test.pcf 
+par -w -intstyle ise -ol high -mt off cordic_test_map.ncd cordic_test.ncd cordic_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr cordic_test.pcf 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_test_map.ncd cordic_test.ngd cordic_test.pcf 
+par -w -intstyle ise -ol high -mt off cordic_test_map.ncd cordic_test.ncd cordic_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr cordic_test.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f cordic_test.ut cordic_test.ncd 
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_test_map.ncd cordic_test.ngd cordic_test.pcf 
+par -w -intstyle ise -ol high -mt off cordic_test_map.ncd cordic_test.ncd cordic_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr cordic_test.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f cordic_test.ut cordic_test.ncd 
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_test_map.ncd cordic_test.ngd cordic_test.pcf 
+par -w -intstyle ise -ol high -mt off cordic_test_map.ncd cordic_test.ncd cordic_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr cordic_test.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f cordic_test.ut cordic_test.ncd 
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_test_map.ncd cordic_test.ngd cordic_test.pcf 
+par -w -intstyle ise -ol high -mt off cordic_test_map.ncd cordic_test.ncd cordic_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr cordic_test.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f cordic_test.ut cordic_test.ncd 
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_test_map.ncd cordic_test.ngd cordic_test.pcf 
+par -w -intstyle ise -ol high -mt off cordic_test_map.ncd cordic_test.ncd cordic_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr cordic_test.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f cordic_test.ut cordic_test.ncd 
+xst -intstyle ise -ifn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.xst" -ofn "/home/main/git/FPGA-CORDIC/CORDIC/cordic_test.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc nexys3.ucf -p xc6slx16-csg324-3 cordic_test.ngc cordic_test.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cordic_test_map.ncd cordic_test.ngd cordic_test.pcf 
+par -w -intstyle ise -ol high -mt off cordic_test_map.ncd cordic_test.ncd cordic_test.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml cordic_test.twx cordic_test.ncd -o cordic_test.twr cordic_test.pcf -ucf nexys3.ucf 
+bitgen -intstyle ise -f cordic_test.ut cordic_test.ncd 

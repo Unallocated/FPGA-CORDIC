@@ -1,0 +1,34 @@
+//! **************************************************************************
+// Written by: Map P.68d on Tue Dec 31 19:56:03 2013
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "rst" LOCATE = SITE "B8" LEVEL 1;
+PIN rst_pin<0> = BEL "rst" PINNAME PAD;
+PIN "rst_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "leds<0>" LOCATE = SITE "U16" LEVEL 1;
+COMP "leds<1>" LOCATE = SITE "V16" LEVEL 1;
+COMP "leds<2>" LOCATE = SITE "U15" LEVEL 1;
+COMP "leds<3>" LOCATE = SITE "V15" LEVEL 1;
+COMP "leds<4>" LOCATE = SITE "M11" LEVEL 1;
+COMP "leds<5>" LOCATE = SITE "N11" LEVEL 1;
+COMP "leds<6>" LOCATE = SITE "R11" LEVEL 1;
+COMP "leds<7>" LOCATE = SITE "T11" LEVEL 1;
+TIMEGRP sys_clk_pin = BEL "slow_clk" BEL "_i000012_0" BEL "_i000012_1" BEL
+        "_i000012_2" BEL "_i000012_3" BEL "_i000012_4" BEL "_i000012_5" BEL
+        "_i000012_6" BEL "_i000012_7" BEL "_i000012_8" BEL "_i000012_9" BEL
+        "_i000012_10" BEL "_i000012_11" BEL "_i000012_12" BEL "_i000012_13"
+        BEL "_i000012_14" BEL "_i000012_15" BEL "_i000012_16" BEL
+        "_i000012_17" BEL "_i000012_18" BEL "_i000012_19" BEL "_i000012_20"
+        BEL "_i000012_21" BEL "_i000012_22" BEL "clk_BUFGP/BUFG" BEL
+        "uut/blk00000003" BEL "uut/blk00000004" BEL "uut/blk00000005" BEL
+        "uut/blk00000006" BEL "uut/blk00000007" BEL "uut/blk00000008" BEL
+        "uut/blk00000009" BEL "uut/blk0000000a" BEL "uut/blk0000000b" BEL
+        "uut/blk0000000c" BEL "uut/blk0000038e" BEL "uut/blk0000038f" BEL
+        "uut/blk00000390" BEL "uut/blk00000391" BEL "uut/blk00000392" BEL
+        "uut/blk00000393" BEL "uut/blk00000394" BEL "uut/blk00000395" BEL
+        "uut/blk000003bc";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+
